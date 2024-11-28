@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <ion-icon src="/assets/{{icono}}.svg" id="tema" (click)="cambiarTema()"></ion-icon>
+  
+  <div class="cards">
+    
+    <table>
+      <tr *ngFor="let item of carrito; index as indice">
+        <td>
+          <img src="{{ item.imagen }}" alt="">
+        </td>
+        <td>{{ item.nombre }}</td>
+        <td>${{ item.precio }}</td>
+        <td><ion-icon name="trash" (click)="delToCart(indice)"></ion-icon></td>
+      </tr>
+    </table>
+  </div>
+  <ion-tab-bar>
+    <ion-tab-button tab="home">
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
+      Home
+    </ion-tab-button>
+    <ion-tab-button tab="radio">
+      <ion-icon name="car" [routerLink]="['/pedir-viaje']"></ion-icon>
+      pedir viaje
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-content>

@@ -1,0 +1,74 @@
+table{
+    margin: 6vh 3vw;
+}
+
+td{
+    font-size: 1.5rem;
+    padding: 0px 10px;
+}
+
+td img{
+    width: 15rem;
+    min-width: 15rem;
+}
+
+td:nth-child(3){
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+td ion-icon{
+    font-size: 2rem;
+    margin-left: 10px;
+    color: darkred;
+}
+
+tr{
+    border-bottom: 1px #dcdcdc solid;
+}
+
+tr:last-child{
+    border-bottom: none;
+}
+#tema{
+    color: var(--icono-tema);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+  }
+  .cards{
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    min-height: 100vh;
+    input, button{
+      width: 80%;
+      height: 2.5rem;
+      outline: none;
+      border: none;
+      border-radius: 1.25rem;
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 38px;
+    }
+    input{    
+      background-color: var(--fondo-input);
+      color: var(--texto-input)
+    }
+    button{
+      background-color: var(--icono);
+    }
+    h1 {
+      color: var(--color-titulo);
+    }
+    label {
+      color: var(--color-parrafo);
+    }
+
+}
+.cards, input{
+    transition: background-color .5s ease, color .5s ease;
+  }

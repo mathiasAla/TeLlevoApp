@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-progress-bar *ngIf="showProgress" type="indeterminate" color="medium"></ion-progress-bar><!-- El 'showProgress' es para mostrar la barra de carga -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-icon src="/assets/{{icono}}.svg" id="tema" (click)="cambiarTema()"></ion-icon>
+  <div class="cards">
+    <ion-icon src="/assets/logo.svg" id="logo"></ion-icon>
+    <h1>TellevoApp Alumno</h1>
+    <input type="text" placeholder="nombre del pasajero">
+
+    <div id="contenedor">
+      <div id="productos">  
+        <div class="producto" *ngFor="let item of productos">
+          <div class="imagen" style="background-image: url('{{ item.imagen }}');">
+            <ion-icon name="add-circle" id="like" (click)="addToCart(item)"></ion-icon>
+          </div>
+          <div class="datos">
+            <p class="nombre">{{ item.nombre }}</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <ion-tab-bar>
+    <ion-tab-button tab="home">
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
+      Home
+    </ion-tab-button>
+    <ion-tab-button tab="cart">
+      <ion-icon name="cart" [routerLink]="['/carrito']"></ion-icon>
+      Carrito
+      {{carrito.length}}
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-content>

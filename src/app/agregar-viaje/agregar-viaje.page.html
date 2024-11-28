@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-progress-bar *ngIf="showProgress" type="indeterminate" color="medium"></ion-progress-bar><!-- El 'showProgress' es para mostrar la barra de carga -->
+</ion-header>
+
+<ion-content [fullscreen]="true">  
+  <ion-icon src="/assets/{{icono}}.svg" id="tema" (click)="cambiarTema()"></ion-icon>
+  <div class="cards">
+    <ion-icon src="/assets/logo.svg" id="logo"></ion-icon>
+    <h1>TellevoApp Conductor</h1>
+    <input type="text" placeholder="Donde empieza su viaje?">
+    <label style="font-size: x-large;">Elija fecha y hora de partida del viaje</label>
+    <ion-datetime presentation="date-time" [preferWheel]="true"></ion-datetime>
+    <button (click)="agregarViaje()"> Agregar viaje</button> <!--el "(click)" para ejecutar la barra de carga-->
+  </div>
+
+
+  <ion-tab-bar>
+    <ion-tab-button tab="home">
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
+      Home
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-content>

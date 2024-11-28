@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-progress-bar *ngIf="showProgress" type="indeterminate" color="medium"></ion-progress-bar><!-- El 'showProgress' es para mostrar la barra de carga -->
+</ion-header>
+  
+<ion-content [fullscreen]="true">
+  <ion-icon src="/assets/{{icono}}.svg" id="tema" (click)="cambiarTema()"></ion-icon>
+  <div class="cards">
+    <ion-icon src="/assets/logo.svg" id="logo"></ion-icon>
+    <h1>TellevoApp Alumno</h1>
+    <input type="text" placeholder="nombre de usuario" [(ngModel)]="email">
+    <input type="{{sw?'text':'password'}}" placeholder="contraseña" [(ngModel)]="clave">
+    <button (click)="agregarYLogin()">Ingresar</button> <!--el "(click)" para ejecutar la barra de carga-->
+    <p fill="clear" (click)="sw=!sw">{{sw?'ocultar':'mostrar'}} contraseña
+    </p>
+    <p (click)="setOpen(true)">Olvidé mi contraseña</p>
+  </div>
+
+  <ion-tab-bar>
+    <ion-tab-button tab="home">
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
+      Home
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-content>
+<!-- recuperar clave =================================================================== -->
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-content>
+      <div class="contenedor">
+        <ion-icon src="/assets/logo.svg"></ion-icon>
+        <h1>Recupera la clave</h1>
+        <input type="text" placeholder="usuario@gmail.com" [(ngModel)]="email"> 
+        <button (click)="resetPass()">Recuperar</button>
+        <button (click)="setOpen(false)">Cancelar</button>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<!-- ======================================================================================== -->
+

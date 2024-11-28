@@ -1,0 +1,145 @@
+#productos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 5%;
+  overflow: auto;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.datos .nombre {
+  font-size: 0.9rem; 
+}
+
+.producto {
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  height: 13rem;
+}
+
+.imagen {
+  border-radius: 20px;
+  background-color: #F0F5EA;
+  width: 100%;
+  height: 100%; 
+  background-position: center;
+  background-size: cover; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: relative;
+}
+
+#like {
+  font-size: 2.5rem;
+  color: rgb(255 255 255);
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
+#boton {
+  width: 63%;
+  margin-left: 9rem;
+}
+
+.items {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #969696;
+  font-size: .9rem;
+  align-items: center;
+}  
+
+
+.cards{
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    min-height: 100vh;
+    ion-icon{
+      font-size: 6rem;
+      color: var(--icono);
+    }
+    input, button{
+      width: 80%;
+      height: 2.5rem;
+      outline: none;
+      border: none;
+      border-radius: 1.25rem;
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 38px;
+    }
+    input{    
+      background-color: var(--fondo-input);
+      color: var(--texto-input)
+    }
+    button{
+      background-color: var(--icono);
+    }
+    h1 {
+      color: var(--color-titulo);
+    }
+    label {
+      color: var(--color-parrafo);
+    }  
+  }
+  #tema{
+    color: var(--icono-tema);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.5rem;
+  }
+  
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--fondo-input);
+    color:black;  
+}
+
+table, th, td {
+    border: 2px solid #53C5F2;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.cards, input{
+  transition: background-color .5s ease, color .5s ease;
+}
+
+
+
+
+.datos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  p {
+    font-size: .7rem;
+  }
+}
+
+.items {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #969696;
+  font-size: .9rem;
+  align-items: center;
+}

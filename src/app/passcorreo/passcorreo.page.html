@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true">
+  <ion-icon src="/assets/{{icono}}.svg" id="tema" (click)="cambiarTema()"></ion-icon>
+  <div class="cards">
+    <ion-icon src="/assets/logo.svg" id="logo"></ion-icon>
+    <h1>Codigo por correo</h1>
+    <input type="text" placeholder="Ingrese su correo">
+    <button [routerLink]="['/home']" (click)="correoPass()">Ingresar</button>
+  </div>
+  <ion-tab-bar>
+    <ion-tab-button tab="home">
+      <ion-icon name="home" [routerLink]="['/home']"></ion-icon>
+      Home
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-content>

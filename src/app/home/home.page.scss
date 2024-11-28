@@ -1,27 +1,112 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#container a {
-  text-decoration: none;
+
+.cards{
+  background-color: var(--fondo);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 13vh;
+  padding: 20px;
+  min-height: 100vh;
+  
+  ion-icon{
+    font-size: 6rem;
+    color: var(--icono);
+  }
+  
+  input, button{
+    width: 90%;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    border-radius: 1.25rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  input{    
+    background-color: var(--fondo-input);
+  }
+  button{
+    background-color: var(--icono);
+  }
+  h3 {
+    color: var(--color-titulo);
+  }
+  p {
+    color: var(--color-parrafo);
+    font-size: medium;
+  }  
 }
+.card{
+  overflow: hidden;
+  width: 90%;
+  background-color: var(--fondo-cards);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 375px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 0.5vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+
+#tema{
+  color: var(--icono-tema);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+      padding: 15px;
+  }
+
+  .card {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+
+  ion-tab-bar {
+      padding: 5px 0;
+  }
+}
+
+.img-card{
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  }
+
+  .cards, input{
+    transition: background-color .5s ease, color .5s ease;
+  }
+
+
